@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Missões Espaciais</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Missões Espaciais</h1>
+      <p>Conectando o frontend à API CRUD das missões.</p>
+    </header>
+
+    <section class="card">
+      <h2 id="form-title">Criar nova missão</h2>
+      <form id="mission-form">
+        <input type="hidden" id="mission-id" />
+
+        <label for="name">Nome da missão</label>
+        <input type="text" id="name" placeholder="Missão Lua Azul" required />
+
+        <label for="crew">Tripulação</label>
+        <input type="text" id="crew" placeholder="Equipe A" required />
+
+        <label for="spacecraft">Nave espacial</label>
+        <input type="text" id="spacecraft" placeholder="Apollo 11" required />
+
+        <label for="destination">Destino</label>
+        <input type="text" id="destination" placeholder="Lua" required />
+
+        <label for="status">Status</label>
+        <input type="text" id="status" placeholder="Planejada" required />
+
+        <label for="duration">Duração</label>
+        <input type="text" id="duration" placeholder="10 dias" required />
+
+        <div class="actions">
+          <button type="submit" id="submit-button">Salvar missão</button>
+          <button type="button" id="cancel-edit" class="secondary hidden">Cancelar edição</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Lista de missões</h2>
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Tripulação</th>
+              <th>Nave</th>
+              <th>Destino</th>
+              <th>Status</th>
+              <th>Duração</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="missions-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <div id="message" class="message hidden"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
